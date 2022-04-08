@@ -1,4 +1,4 @@
-import sys
+import random
 
 user_word = []
 user_letters = []
@@ -24,6 +24,11 @@ for _ in word:
 while True:
   print(" ".join(user_word))
   print()
+    
+  if "".join(user_word) == word:
+    print("Congratulation, You win!")
+    break
+
   letter = input("Suggested letter: ")
   found_indexes = find_indexes(word, letter)
 
